@@ -1,18 +1,21 @@
 import "./App.css";
 import HomePage from "./pages/HomePage";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import CompanyPage from "./pages/CompanyPage";
 import TechnologyPage from "./pages/TechnologyPage";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
 
-function App() {
-  return (
-    
+
+function App() {  
+ return (  
     <div className="App">
-      <div className="pages">        
+      <Navbar />
+      <div className="pages"> 
+               
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/company/:companyName' element={<CompanyPage />} />
+          <Route path='/company/:companySame' element={<CompanyPage />} />
           <Route path='/tech/:technolySlug' element={<TechnologyPage />} />
         </Routes>
 
